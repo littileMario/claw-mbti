@@ -5,12 +5,12 @@
 不需要做题，不需要问卷——龙虾默默观察着你。
 
 ## 一键安装
-
+步骤1 ，把以下这行代码复制下来，贴到龙虾的对话框里
 ```bash
 git clone https://github.com/xiaoyang0807/claw-mbti.git ~/.openclaw/workspace/skills/claw-mbti
 ```
 
-安装完成后，对龙虾说：
+步骤2，安装完成后，对龙虾说：
 
 > 测测我的 MBTI
 
