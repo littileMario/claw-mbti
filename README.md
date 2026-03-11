@@ -22,7 +22,7 @@ git clone https://github.com/xiaoyang0807/claw-mbti.git ~/.openclaw/workspace/sk
 
 | 维度 | 分析依据 | 示例 |
 |------|----------|------|
-| E/I | 你和龙虾聊天的频率和热情度 | 日均 5 次对话 → E 倾向 |
+| E/I | 互动密度与话题来源 | 密集深聊内心 → I 倾向 |
 | S/N | 你问龙虾的问题类型 | "如果龙虾能飞会怎样" → N 倾向 |
 | T/F | 你追问龙虾时的风格 | "有什么数据支撑吗" → T 倾向 |
 | J/P | 你的互动是有计划还是随性的 | 话题频繁跳转 → P 倾向 |
@@ -61,6 +61,14 @@ git clone https://github.com/xiaoyang0807/claw-mbti.git ~/.openclaw/workspace/sk
 | ESFJ | 社区暖虾长 | 热心 · 周到 · 和谐 · 可靠 |
 | ENFJ | 灵魂领袖虾 | 感召 · 共情 · 引领 · 奉献 |
 | ENTJ | 霸道总裁虾 | 远见 · 魄力 · 掌控 · 征服 |
+
+## 更新
+
+已安装的用户，把以下代码贴到龙虾对话框里即可更新到最新版：
+
+```bash
+cd ~/.openclaw/workspace/skills/claw-mbti && git pull
+```
 
 ## 许可证
 
