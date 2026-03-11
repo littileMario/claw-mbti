@@ -7,7 +7,7 @@
 ## 一键安装
 
 ```bash
-clawhub install littileMario/claw-mbti
+git clone https://github.com/littileMario/claw-mbti.git ~/.openclaw/workspace/skills/claw-mbti
 ```
 
 安装完成后，对龙虾说：
@@ -61,14 +61,6 @@ clawhub install littileMario/claw-mbti
 | ESFJ | 社区暖虾长 | 热心 · 周到 · 和谐 · 可靠 |
 | ENFJ | 灵魂领袖虾 | 感召 · 共情 · 引领 · 奉献 |
 | ENTJ | 霸道总裁虾 | 远见 · 魄力 · 掌控 · 征服 |
-
-## 手动安装
-
-如果你不想用 clawhub，也可以手动安装：
-
-```bash
-git clone https://github.com/littileMario/claw-mbti.git ~/.openclaw/workspace/skills/claw-mbti
-```
 
 ## 许可证
 
