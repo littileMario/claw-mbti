@@ -7,7 +7,7 @@
 ## 一键安装
 
 ```bash
-git clone https://github.com/littileMario/claw-mbti.git ~/.openclaw/workspace/skills/claw-mbti
+git clone https://github.com/xiaoyang0807/claw-mbti.git ~/.openclaw/workspace/skills/claw-mbti
 ```
 
 安装完成后，对龙虾说：
