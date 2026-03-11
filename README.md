@@ -7,7 +7,7 @@
 ## 一键安装
 
 ```bash
-clawhub install yangxiao/claw-mbti
+clawhub install littileMario/claw-mbti
 ```
 
 安装完成后，对龙虾说：
@@ -67,7 +67,7 @@ clawhub install yangxiao/claw-mbti
 如果你不想用 clawhub，也可以手动安装：
 
 ```bash
-git clone https://github.com/yangxiao/claw-mbti.git ~/.openclaw/workspace/skills/claw-mbti
+git clone https://github.com/littileMario/claw-mbti.git ~/.openclaw/workspace/skills/claw-mbti
 ```
 
 ## 许可证

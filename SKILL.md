@@ -4,7 +4,7 @@ description: 龙虾MBTI性格诊断。基于用户与龙虾的互动频次、提
 metadata: { "openclaw": { "emoji": "🦞" } }
 user-invocable: true
 disable-model-invocation: false
-homepage: https://github.com/yangxiao/claw-mbti
+homepage: https://github.com/littileMario/claw-mbti
 ---
 
 # 龙虾 MBTI 性格诊断 🦞
