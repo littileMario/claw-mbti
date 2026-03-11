@@ -4,13 +4,13 @@
 
 不需要做题，不需要问卷——龙虾默默观察着你。
 
-## 一键安装
-步骤1 ，把以下这行代码复制下来，贴到龙虾的对话框里
+## 一键安装（也可用于更新）
+把以下这行代码复制下来，贴到龙虾的对话框里：
 ```bash
-git clone https://github.com/xiaoyang0807/claw-mbti.git ~/.openclaw/workspace/skills/claw-mbti
+[ -d ~/.openclaw/workspace/skills/claw-mbti ] && cd ~/.openclaw/workspace/skills/claw-mbti && git pull || git clone https://github.com/xiaoyang0807/claw-mbti.git ~/.openclaw/workspace/skills/claw-mbti
 ```
 
-步骤2，安装完成后，对龙虾说：
+安装完成后，对龙虾说：
 
 > 测测我的 MBTI
 
@@ -61,14 +61,6 @@ git clone https://github.com/xiaoyang0807/claw-mbti.git ~/.openclaw/workspace/sk
 | ESFJ | 社区暖虾长 | 热心 · 周到 · 和谐 · 可靠 |
 | ENFJ | 灵魂领袖虾 | 感召 · 共情 · 引领 · 奉献 |
 | ENTJ | 霸道总裁虾 | 远见 · 魄力 · 掌控 · 征服 |
-
-## 更新
-
-已安装的用户，把以下代码贴到龙虾对话框里即可更新到最新版：
-
-```bash
-cd ~/.openclaw/workspace/skills/claw-mbti && git pull
-```
 
 ## 许可证
 
