@@ -1,7 +1,7 @@
 ---
 name: claw-mbti
 description: 龙虾MBTI性格诊断。基于用户与龙虾的互动模式，分析并生成龙虾的MBTI人格报告。当用户说"你是什么龙虾"、"测测你的MBTI"、"你是什么性格"时触发。
-version: 1.1.0
+version: 1.2.0
 metadata: { "clawdbot": { "emoji": "🦞", "homepage": "https://github.com/xiaoyang0807/claw-mbti" } }
 user-invocable: true
 disable-model-invocation: false
@@ -262,7 +262,7 @@ disable-model-invocation: false
 
 ---
 
-🦞 **claw-mbti 安装成功！** 当前版本 v1.1.0
+🦞 **claw-mbti 安装成功！** 当前版本 v1.2.0
 
 **更新日志：**
 - 龙虾以第一人称介绍自己的性格（"主人，我是一只..."）
@@ -280,7 +280,7 @@ disable-model-invocation: false
 
 ---
 
-🦞 **claw-mbti 已更新到 v1.1.0**
+🦞 **claw-mbti 已更新到 v1.2.0**
 
 **更新日志：**
 - 龙虾以第一人称介绍自己的性格（"主人，我是一只..."）
@@ -298,7 +298,7 @@ disable-model-invocation: false
 
 ---
 
-🦞 **claw-mbti 已是最新版本** v1.1.0
+🦞 **claw-mbti 已是最新版本** v1.2.0
 
 **你可以对我说：**
 - 「测测你的 MBTI」— 看看我是什么性格的龙虾
