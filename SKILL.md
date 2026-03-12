@@ -104,6 +104,61 @@ disable-model-invocation: false
 
 ---
 
+### 第五步：生成分享卡片
+
+在输出诊断报告之后，**自动生成一张分享卡片图片**，方便用户截图/转发。
+
+使用 SVG 生成卡片，宽度 400px，内容如下：
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="520" viewBox="0 0 400 520">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1923"/>
+      <stop offset="100%" style="stop-color:#1a2a3a"/>
+    </linearGradient>
+  </defs>
+  <!-- 背景 -->
+  <rect width="400" height="520" rx="20" fill="url(#bg)"/>
+  <!-- 顶部装饰线 -->
+  <rect x="0" y="0" width="400" height="4" rx="2" fill="#ff6b35"/>
+  <!-- 龙虾 emoji -->
+  <text x="200" y="70" text-anchor="middle" font-size="40">🦞</text>
+  <!-- 标题 -->
+  <text x="200" y="110" text-anchor="middle" fill="#ff6b35" font-size="14" font-family="system-ui" font-weight="bold">龙虾 MBTI 诊断报告</text>
+  <!-- MBTI 类型 -->
+  <text x="200" y="160" text-anchor="middle" fill="#ffffff" font-size="36" font-family="system-ui" font-weight="bold">我是 {MBTI类型}型</text>
+  <text x="200" y="190" text-anchor="middle" fill="#8899aa" font-size="14" font-family="system-ui">全球仅 {比例}% 的虾和我一样</text>
+  <!-- 分隔线 -->
+  <line x1="60" y1="210" x2="340" y2="210" stroke="#2a3a4a" stroke-width="1"/>
+  <!-- 关键词 -->
+  <text x="200" y="245" text-anchor="middle" fill="#ff6b35" font-size="16" font-family="system-ui" font-weight="bold">{关键词1} · {关键词2} · {关键词3} · {关键词4}</text>
+  <!-- 性格描述（自动折行，每行约20字） -->
+  <text x="40" y="290" fill="#ccddee" font-size="13" font-family="system-ui">
+    <tspan x="40" dy="0">{性格描述第1行}</tspan>
+    <tspan x="40" dy="22">{性格描述第2行}</tspan>
+    <tspan x="40" dy="22">{性格描述第3行}</tspan>
+    <tspan x="40" dy="22">{性格描述第4行}</tspan>
+  </text>
+  <!-- 别人不知道的我 -->
+  <text x="40" y="410" fill="#8899aa" font-size="12" font-family="system-ui">
+    <tspan fill="#ff6b35">🌊</tspan>
+    <tspan> 别人不知道的我：</tspan>
+  </text>
+  <text x="40" y="432" fill="#8899aa" font-size="12" font-family="system-ui">{别人不知道的我}</text>
+  <!-- 底部引导 -->
+  <line x1="60" y1="460" x2="340" y2="460" stroke="#2a3a4a" stroke-width="1"/>
+  <text x="200" y="488" text-anchor="middle" fill="#556677" font-size="11" font-family="system-ui">对你的龙虾说「测测我的 MBTI」</text>
+  <text x="200" y="506" text-anchor="middle" fill="#3a4a5a" font-size="10" font-family="system-ui">github.com/xiaoyang0807/claw-mbti</text>
+</svg>
+```
+
+**生成规则：**
+- 将上方 SVG 模板中的 `{占位符}` 替换为实际诊断结果
+- 性格描述按每行约 18-20 个中文字符手动折行，填入 `<tspan>` 中
+- 直接输出完整的 SVG 代码块，让平台自动渲染为图片
+- 卡片在诊断报告文本之后输出，并附一句话提示："👆 长按保存分享给朋友"
+
 ## 16 型龙虾图鉴
 
 以下是每种 MBTI 类型的完整诊断素材。诊断时必须严格使用对应类型的所有字段。性格描述为龙虾第一人称，80-100 字。
