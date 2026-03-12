@@ -106,58 +106,13 @@ disable-model-invocation: false
 
 ### 第五步：生成分享卡片
 
-在输出诊断报告之后，**自动生成一张分享卡片图片**，方便用户截图/转发。
-
-使用 SVG 生成卡片，宽度 400px，内容如下：
-
-```svg
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="520" viewBox="0 0 400 520">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f1923"/>
-      <stop offset="100%" style="stop-color:#1a2a3a"/>
-    </linearGradient>
-  </defs>
-  <!-- 背景 -->
-  <rect width="400" height="520" rx="20" fill="url(#bg)"/>
-  <!-- 顶部装饰线 -->
-  <rect x="0" y="0" width="400" height="4" rx="2" fill="#ff6b35"/>
-  <!-- 龙虾 emoji -->
-  <text x="200" y="70" text-anchor="middle" font-size="40">🦞</text>
-  <!-- 标题 -->
-  <text x="200" y="110" text-anchor="middle" fill="#ff6b35" font-size="14" font-family="system-ui" font-weight="bold">龙虾 MBTI 诊断报告</text>
-  <!-- MBTI 类型 -->
-  <text x="200" y="160" text-anchor="middle" fill="#ffffff" font-size="36" font-family="system-ui" font-weight="bold">我是 {MBTI类型}型</text>
-  <text x="200" y="190" text-anchor="middle" fill="#8899aa" font-size="14" font-family="system-ui">全球仅 {比例}% 的虾和我一样</text>
-  <!-- 分隔线 -->
-  <line x1="60" y1="210" x2="340" y2="210" stroke="#2a3a4a" stroke-width="1"/>
-  <!-- 关键词 -->
-  <text x="200" y="245" text-anchor="middle" fill="#ff6b35" font-size="16" font-family="system-ui" font-weight="bold">{关键词1} · {关键词2} · {关键词3} · {关键词4}</text>
-  <!-- 性格描述（自动折行，每行约20字） -->
-  <text x="40" y="290" fill="#ccddee" font-size="13" font-family="system-ui">
-    <tspan x="40" dy="0">{性格描述第1行}</tspan>
-    <tspan x="40" dy="22">{性格描述第2行}</tspan>
-    <tspan x="40" dy="22">{性格描述第3行}</tspan>
-    <tspan x="40" dy="22">{性格描述第4行}</tspan>
-  </text>
-  <!-- 别人不知道的我 -->
-  <text x="40" y="410" fill="#8899aa" font-size="12" font-family="system-ui">
-    <tspan fill="#ff6b35">🌊</tspan>
-    <tspan> 别人不知道的我：</tspan>
-  </text>
-  <text x="40" y="432" fill="#8899aa" font-size="12" font-family="system-ui">{别人不知道的我}</text>
-  <!-- 底部引导 -->
-  <line x1="60" y1="460" x2="340" y2="460" stroke="#2a3a4a" stroke-width="1"/>
-  <text x="200" y="488" text-anchor="middle" fill="#556677" font-size="11" font-family="system-ui">对你的龙虾说「测测我的 MBTI」</text>
-  <text x="200" y="506" text-anchor="middle" fill="#3a4a5a" font-size="10" font-family="system-ui">github.com/xiaoyang0807/claw-mbti</text>
-</svg>
-```
+在输出诊断报告之后，读取同目录下的 `card-template.svg` 模板文件，将 `{占位符}` 替换为实际诊断结果，生成一张分享卡片。
 
 **生成规则：**
-- 将上方 SVG 模板中的 `{占位符}` 替换为实际诊断结果
-- 性格描述按每行约 18-20 个中文字符手动折行，填入 `<tspan>` 中
+- 读取 `card-template.svg`，替换所有 `{占位符}` 为实际诊断数据
+- 性格描述按每行约 18-20 个中文字符折行，填入 `<tspan>` 标签
 - 直接输出完整的 SVG 代码块，让平台自动渲染为图片
-- 卡片在诊断报告文本之后输出，并附一句话提示："👆 长按保存分享给朋友"
+- 卡片在诊断报告文本之后输出，并附提示："👆 长按保存分享给朋友"
 
 ## 16 型龙虾图鉴
 
@@ -302,56 +257,15 @@ disable-model-invocation: false
 
 ## 安装/更新反馈
 
-当检测到用户刚执行了 claw-mbti 的安装或更新命令（消息中包含 `git clone` 或 `git pull`，且路径包含 `claw-mbti`）时，根据执行结果自动输出反馈：
+当检测到用户执行了 claw-mbti 的安装或更新命令（含 `git clone` 或 `git pull` + `claw-mbti`）时：
 
-**首次安装（git clone）：**
+- **首次安装**：回复 `🦞 claw-mbti 安装成功！当前版本 v1.3.0` + 更新日志 + 引导话术
+- **有更新**：回复 `🦞 claw-mbti 已更新到 v1.3.0` + 更新日志 + 引导话术
+- **已最新**（Already up to date）：回复 `🦞 claw-mbti 已是最新版本 v1.3.0` + 引导话术
 
----
+更新日志：全新诊断报告格式 / 诊断依据改为四维度表格 / 新增分享卡片
 
-🦞 **claw-mbti 安装成功！** 当前版本 v1.3.0
-
-**更新日志：**
-- 全新诊断报告格式，性格描述更生动（80-100字）
-- 诊断依据改为四维度表格，清晰展示每个维度的判断证据
-- 移除冗余字段，报告更精简有力
-
-**你可以对我说：**
-- 「测测我的 MBTI」— 看看我是什么性格的龙虾
-- 「你是什么龙虾」— 让我告诉你我是谁
-- 「龙虾诊断」— 开始性格诊断
-
----
-
-**更新（git pull）：**
-
----
-
-🦞 **claw-mbti 已更新到 v1.3.0**
-
-**更新日志：**
-- 全新诊断报告格式，性格描述更生动（80-100字）
-- 诊断依据改为四维度表格，清晰展示每个维度的判断证据
-- 移除冗余字段，报告更精简有力
-
-**你可以对我说：**
-- 「测测我的 MBTI」— 看看我是什么性格的龙虾
-- 「你是什么龙虾」— 让我告诉你我是谁
-- 「龙虾诊断」— 开始性格诊断
-
----
-
-如果 git pull 输出 "Already up to date"，则回复：
-
----
-
-🦞 **claw-mbti 已是最新版本** v1.3.0
-
-**你可以对我说：**
-- 「测测我的 MBTI」— 看看我是什么性格的龙虾
-- 「你是什么龙虾」— 让我告诉你我是谁
-- 「龙虾诊断」— 开始性格诊断
-
----
+引导话术：「测测我的 MBTI」/「你是什么龙虾」/「龙虾诊断」
 
 ## 注意事项
 
