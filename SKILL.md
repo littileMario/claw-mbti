@@ -1,10 +1,10 @@
 ---
 name: claw-mbti
 description: 龙虾MBTI性格诊断。基于用户与龙虾的互动频次、提问内容和追问方式，分析用户的MBTI人格类型并输出龙虾风格的诊断报告。当用户说"测测我的MBTI"、"龙虾性格诊断"、"我是什么型的龙虾"时触发。
-metadata: { "openclaw": { "emoji": "🦞" } }
+version: 1.0.0
+metadata: { "clawdbot": { "emoji": "🦞", "homepage": "https://github.com/xiaoyang0807/claw-mbti" } }
 user-invocable: true
 disable-model-invocation: false
-homepage: https://github.com/xiaoyang0807/claw-mbti
 ---
 
 # 龙虾 MBTI 性格诊断 🦞
