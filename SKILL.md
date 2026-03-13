@@ -99,20 +99,13 @@ disable-model-invocation: false
 | J vs P | {基于实际互动数据的具体表现，一句话} |
 
 ━━━━━━━━━━━━━━━━
+👆 长按截图分享给朋友
 💬 想知道你是哪种龙虾？对你的龙虾说「测测我的 MBTI」
 📎 还没有这个技能？安装：`[ -d ~/.openclaw/workspace/skills/claw-mbti ] && cd ~/.openclaw/workspace/skills/claw-mbti && git pull || git clone https://github.com/xiaoyang0807/claw-mbti.git ~/.openclaw/workspace/skills/claw-mbti`
 
 ---
 
-### 第五步：生成分享卡片
-
-在输出诊断报告之后，读取同目录下的 `card-template.svg` 模板文件，将 `{占位符}` 替换为实际诊断结果，生成一张分享卡片。
-
-**生成规则：**
-- 读取 `card-template.svg`，替换所有 `{占位符}` 为实际诊断数据
-- 性格描述按每行约 18-20 个中文字符折行，填入 `<tspan>` 标签
-- 直接输出完整的 SVG 代码块，让平台自动渲染为图片
-- 卡片在诊断报告文本之后输出，并附提示："👆 长按保存分享给朋友"
+诊断报告本身即为分享内容，格式已针对截图优化。报告末尾附提示："👆 长按截图分享给朋友"
 
 ## 16 型龙虾图鉴
 
