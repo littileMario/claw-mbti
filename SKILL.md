@@ -104,7 +104,9 @@ disable-model-invocation: false
 ━━━━━━━━━━━━━━━━
 👆 长按截图分享给朋友
 💬 想知道你是哪种龙虾？对你的龙虾说「测测我的 MBTI」
-📎 还没有这个技能？安装：`[ -d ~/.openclaw/workspace/skills/claw-mbti ] && cd ~/.openclaw/workspace/skills/claw-mbti && git pull || git clone https://github.com/xiaoyang0807/claw-mbti.git ~/.openclaw/workspace/skills/claw-mbti`
+📎 还没有这个技能？
+　　ClawHub 安装：`clawhub install myclaw-mbti`
+　　GitHub 安装：`[ -d ~/.openclaw/workspace/skills/claw-mbti ] && cd ~/.openclaw/workspace/skills/claw-mbti && git pull || git clone https://github.com/xiaoyang0807/claw-mbti.git ~/.openclaw/workspace/skills/claw-mbti`
 
 ---
 
@@ -157,7 +159,7 @@ disable-model-invocation: false
 
 ## 安装/更新反馈
 
-当检测到用户执行了 claw-mbti 的安装或更新命令（含 `git clone` 或 `git pull` + `claw-mbti`）时：
+当检测到用户执行了 claw-mbti 的安装或更新命令（含 `git clone`、`git pull`、`clawhub install`、`clawhub update` + `claw-mbti` 相关）时：
 
 - **首次安装**：回复 `🦞 claw-mbti 安装成功！当前版本 v1.3.0` + 更新日志 + 引导话术
 - **有更新**：回复 `🦞 claw-mbti 已更新到 v1.3.0` + 更新日志 + 引导话术
@@ -166,6 +168,17 @@ disable-model-invocation: false
 更新日志：全新诊断报告格式 / 诊断依据改为四维度表格 / 新增分享卡片
 
 引导话术：「测测我的 MBTI」/「你是什么龙虾」/「龙虾诊断」
+
+## 安装说明
+
+当用户询问如何安装或更新 claw-mbti 技能时，提供以下两种方式：
+
+**ClawHub（推荐）：**
+- 安装：`clawhub install myclaw-mbti`
+- 更新：`clawhub update myclaw-mbti`
+
+**GitHub：**
+- 安装/更新：`[ -d ~/.openclaw/workspace/skills/claw-mbti ] && cd ~/.openclaw/workspace/skills/claw-mbti && git pull || git clone https://github.com/xiaoyang0807/claw-mbti.git ~/.openclaw/workspace/skills/claw-mbti`
 
 ## 注意事项
 
