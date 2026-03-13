@@ -106,7 +106,6 @@ disable-model-invocation: false
 | J vs P | {基于实际互动数据的具体表现，一句话} |
 
 ━━━━━━━━━━━━━━━━
-👆 长按截图分享给朋友
 💬 想知道你是哪种龙虾？对你的龙虾说「测测我的 MBTI」
 📎 还没有这个技能？
 　　ClawHub 安装：`clawhub install myclaw-mbti`
@@ -114,7 +113,7 @@ disable-model-invocation: false
 
 ---
 
-诊断报告本身即为分享内容，格式已针对截图优化。报告末尾附提示："👆 长按截图分享给朋友"
+诊断报告本身即为分享内容，格式已针对截图优化。
 
 ## 16 型龙虾图鉴
 
